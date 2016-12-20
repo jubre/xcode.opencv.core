@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		790B0EB61E09C49500A9418D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 790B0EB51E09C49500A9418D /* main.cpp */; };
+		790B0EBD1E09CD5000A9418D /* libopencv_core.2.4.13.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 790B0EBC1E09CD5000A9418D /* libopencv_core.2.4.13.dylib */; };
+		790B0EBF1E09CD6200A9418D /* libopencv_highgui.2.4.13.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 790B0EBE1E09CD6200A9418D /* libopencv_highgui.2.4.13.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		790B0EB21E09C49500A9418D /* xcode.opencv.core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcode.opencv.core; sourceTree = BUILT_PRODUCTS_DIR; };
 		790B0EB51E09C49500A9418D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		790B0EBC1E09CD5000A9418D /* libopencv_core.2.4.13.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.4.13.dylib; path = ../opencv/build/lib/libopencv_core.2.4.13.dylib; sourceTree = "<group>"; };
+		790B0EBE1E09CD6200A9418D /* libopencv_highgui.2.4.13.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.2.4.13.dylib; path = ../opencv/build/lib/libopencv_highgui.2.4.13.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790B0EBF1E09CD6200A9418D /* libopencv_highgui.2.4.13.dylib in Frameworks */,
+				790B0EBD1E09CD5000A9418D /* libopencv_core.2.4.13.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +47,8 @@
 		790B0EA91E09C49400A9418D = {
 			isa = PBXGroup;
 			children = (
+				790B0EBE1E09CD6200A9418D /* libopencv_highgui.2.4.13.dylib */,
+				790B0EBC1E09CD5000A9418D /* libopencv_core.2.4.13.dylib */,
 				790B0EB41E09C49500A9418D /* xcode.opencv.core */,
 				790B0EB31E09C49500A9418D /* Products */,
 			);
@@ -216,6 +224,10 @@
 		790B0EBA1E09C49500A9418D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /Users/junior/WorkSpace/opencv/build/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +235,10 @@
 		790B0EBB1E09C49500A9418D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /Users/junior/WorkSpace/opencv/build/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
